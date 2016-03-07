@@ -56,14 +56,14 @@ public class RememberArray {
 		String temp = "";
 		System.out.println("Alphabetically sorted: ");
 		//Sort
-		for(int i = 0; i < currentItems; i++)
+		for(int i = 0; i < currentItems - 1; i++)
 		{
-			for(int j = i; j < currentItems; j++)
+			for(int j = 1; j < currentItems - i; j++)
 			{
-				if(memory[i].compareToIgnoreCase(memory[j]) > 0)
+				if(memory[j - 1].compareToIgnoreCase(memory[j]) > 0)
 				{
-					temp = memory[i];
-					memory[i] = memory[j];
+					temp = memory[j - 1];
+					memory[j - 1] = memory[j];
 					memory[j] = temp;
 				}
 			}
